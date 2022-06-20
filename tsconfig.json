@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "es6",
-		"lib": [
+		"lib": [//指定要包含在编译中的库文件
 			"dom",
 			"dom.iterable",
-			"esnext"
+			"es6"
 		],
 		"allowJs": true,
 		"skipLibCheck": true,
@@ -17,7 +17,7 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"noEmit": true,
+		"noEmit": false,
 		"removeComments": true,     /*编译后移除注释*/
 		"noEmitOnError": true,      /*🔥如果 ts 报错则暂停编译*/
 		"jsx": "react-jsx"
@@ -26,7 +26,10 @@
 		"start": "react-scripts start"
 	},
 	"include": [
-		"src",
-		"webpack.config.js"
+		"./src/**/*"
 	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
 }
